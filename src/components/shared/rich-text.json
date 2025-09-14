@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "body": {
+    "texto_markdown": {
       "type": "richtext"
     }
   }

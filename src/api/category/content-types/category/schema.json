@@ -26,6 +26,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "eventos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::timeline-event.timeline-event",
+      "mappedBy": "categorias"
     }
   }
 }
