@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_shared_references",
+  "info": {
+    "displayName": "reference",
+    "icon": "quote"
+  },
+  "options": {},
+  "attributes": {
+    "date_published": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "summary": {
+      "type": "blocks"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "relatório",
+        "revista acadêmica",
+        "artigo acadêmico",
+        "artigo jornalístico"
+      ]
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

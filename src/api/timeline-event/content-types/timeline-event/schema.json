@@ -4,15 +4,34 @@
   "info": {
     "singularName": "timeline-event",
     "pluralName": "timeline-events",
-    "displayName": "TimelineEvent"
+    "displayName": "HistoricEvent"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "data": {
-      "type": "date"
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sumario": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.quote",
+      "repeatable": false
     },
     "categorias": {
       "type": "relation",
@@ -20,20 +39,17 @@
       "target": "api::category.category",
       "inversedBy": "eventos"
     },
-    "visivel_ao_publico": {
-      "type": "boolean"
-    },
     "conteudo_rico_dinamico": {
       "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "components": [
         "shared.rich-text",
         "shared.media"
       ]
-    },
-    "sumario": {
-      "type": "component",
-      "component": "shared.quote",
-      "repeatable": false
     }
   }
 }
